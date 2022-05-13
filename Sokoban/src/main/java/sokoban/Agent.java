@@ -46,7 +46,7 @@ public class Agent {
         return res;
     }
     public static void main(String[] args) throws IOException{
-        String filename = "config/problem10.txt";
+        String filename = "../ASP/benchmarks/config/problem10.txt";
         FileInputStream inputStream = new FileInputStream(filename);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 

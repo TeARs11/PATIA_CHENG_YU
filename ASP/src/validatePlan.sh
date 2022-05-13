@@ -3,14 +3,13 @@ VERSION=4.0.0
 FILES=""
 TOTAL_FILES=0
 TOTAL_VALIDATED_PLANS=0
-VALIDATE_BIN=validate-osx
+VALIDATE_BIN=validate-nux
 
 #Tests path definitions for IPC1
 TEST[0]="../benchmarks/blocksworld"
 TEST[1]="../benchmarks/logistics"
-TEST[3]="..//benchmarks/depots"
-TEST[4]="../benchmarks/gripper"
-
+TEST[2]="..//benchmarks/depots"
+TEST[3]="../benchmarks/gripper"
 
 #Loop over all test paths
 for test in ${TEST[@]} ;do

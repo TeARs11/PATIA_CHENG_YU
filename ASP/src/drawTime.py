@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt 
 
@@ -18,25 +17,28 @@ list.append(path4)
 for j in range(0,4):
     filename1 = list[j] + timeNom
     file = open(filename1)  
-    data = file.readlines() 
+    data1 = file.readlines() 
+
+    filename2 = list[j] + timeHSP
+    file02 = open(filename2)  
+    data2 = file02.readlines() 
+
     x1 = [] 
     y1 = []
-    for i in range(len(data)):
+    for i in range(min(len(data1), len(data2))):
         x1.append(i)
-        y1.append(int(data[i])/1000)
+        y1.append(int(data1[i])/1000)
 
 
 
 
     #-----------time 02
-    filename2 = list[j] + timeHSP
-    file02 = open(filename2)  
-    data = file02.readlines() 
+
     x2 = x1 
     y2 = []
     #print('data = ', data)
-    for i in range(len(data)):
-        y2.append(int(data[i]))
+    for i in range(min(len(data1), len(data2))):
+        y2.append(int(data2[i]))
         
         
     l1=plt.plot(x1,y1,'r--',label='Random')

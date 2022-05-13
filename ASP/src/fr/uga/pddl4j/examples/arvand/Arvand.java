@@ -1,4 +1,4 @@
-package fr.uga.pddl4j.examples.asp;
+package fr.uga.pddl4j.examples.arvand;
 
 import fr.uga.pddl4j.heuristics.state.StateHeuristic;
 import fr.uga.pddl4j.parser.ParsedProblem;
@@ -36,9 +36,9 @@ import java.io.IOException;
  * @version 4.0 - 30.11.2021
  */
 
-@CommandLine.Command(name = "ASP",
-        version = "ASP 1.0",
-        description = "Solves a specified planning problem using A* search strategy.",
+@CommandLine.Command(name = "arvand",
+        version = "arvand 1.0",
+        description = "Solves a specified planning problem using Arvand search strategy.",
         sortOptions = false,
         mixinStandardHelpOptions = true,
         headerHeading = "Usage:%n",
@@ -46,12 +46,12 @@ import java.io.IOException;
         descriptionHeading = "%nDescription:%n%n",
         parameterListHeading = "%nParameters:%n",
         optionListHeading = "%nOptions:%n")
-public class ASP extends AbstractPlanner<ADLProblem> {
+public class Arvand extends AbstractPlanner<ADLProblem> {
 
     /**
      * The class logger.
      */
-    private static final Logger LOGGER = LogManager.getLogger(ASP.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(Arvand.class.getName());
     /**
      * The weight of the heuristic.
      */
@@ -120,7 +120,7 @@ public class ASP extends AbstractPlanner<ADLProblem> {
 
     public Plan arvand(ADLProblem problem) {
 
-        int MAX_STEPS = 10;
+        int MAX_STEPS = 7;
 
         // First we create an instance of the heuristic to use to guide the search
         final StateHeuristic heuristic = StateHeuristic.getInstance(this.getHeuristic(), problem);
@@ -304,7 +304,7 @@ public class ASP extends AbstractPlanner<ADLProblem> {
      */
     public static void main(String[] args) {
         try {
-            final ASP planner = new ASP();
+            final Arvand planner = new Arvand();
                     // Solve and print the result
         try {
             long startTime = System.currentTimeMillis();
