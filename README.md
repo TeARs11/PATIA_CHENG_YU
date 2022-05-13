@@ -65,7 +65,7 @@ Cependant, dans certains cas, nous estimons qu'arvand est mieux que HSP.
 
 Un autre problème est survenu avec sokoban, où nous avons constaté que notre algorithme ne pouvait pas trouver une solution à sokoban de toute façon, et que son heuristique restait bloquée à une certaine valeur et ne changeait jamais. Nous n'avons pas trouvé de solution en fin de compte. 
 
-Quant à la dynamique, nous avons essayé de modifier dynamiquement NUM_WALK, LENGTH_WALK et MAX_STEPS, par exemple en augmentant LENGTH_WALK lorsque l'heuristique était bloquée, mais l'effet n'était pas évident, nous pensons donc que le problème est peut-être encore statique.
+Quant à la dynamique, nous avons essayé de modifier dynamiquement NUM_WALK, LENGTH_WALK et MAX_STEPS, par exemple en augmentant LENGTH_WALK lorsque l'heuristique était bloquée ou le nombre de couches est suffisamment grand (c'est-à-dire suffisamment proche de la réponse).
 
  
 ## Compilation :
