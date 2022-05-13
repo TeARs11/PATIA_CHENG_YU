@@ -83,8 +83,11 @@ Quant à la dynamique, nous avons essayé de modifier dynamiquement NUM_WALK, LE
 
 ## Resultat : 
 Nous avons essayé de résoudre 48 problèmes en utilisant arvand, dont 39 ont été résolus avec succès et les 9 restants n'ont pas été résolus en moins de 300s
+
 48 Total val output plan(s) found.
+
 39 validated plan(s).
+
 
 Nous avons constaté que notre algorithme arvand ne fonctionnait pas très bien pour un problème particulier, peut-être s'agissait-il d'une impasse, ou peut-être y avait-il un problème avec l'algorithme heuristique.
  
