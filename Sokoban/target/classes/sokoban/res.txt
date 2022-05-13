@@ -1,0 +1,26 @@
+
+parsing domain file "sokoban_domain.pddl" done successfully
+parsing problem file "sokoban_problem1.pddl" done successfully
+# WARNING: Unable to attach Serviceability Agent. You can try again with escalated privileges. Two options: a) use -Djol.tryWithSudo=true to try with sudo; b) echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+
+problem instantiation done successfully (616 actions, 481 fluents)
+
+* Starting ASTAR search 
+* ASTAR search succeeded
+
+found plan as follows:
+
+00: (   move_box_up v3 h4 h3 h2) [0]
+01: (move_person_right v3 h3 v4) [0]
+02: ( move_person_down v4 h3 h4) [0]
+
+time spent:       0.04 seconds parsing 
+                  0.16 seconds encoding 
+                  0.61 seconds searching
+                  0.80 seconds total time
+
+memory used:      1.66 MBytes for problem representation
+                  1.03 MBytes for searching
+                  2.68 MBytes total
+
+
